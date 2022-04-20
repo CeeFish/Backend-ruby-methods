@@ -7,5 +7,11 @@
 #Example: hangman("alphabet",["a","h"]) should return "a__ha___"
 
 def hangman(word, array)
-    
+    array = []
+    print "Type in your guess: "
+    guess = gets.to_s
+    array.push(guess)
 end
+
+puts "Letters that have been guessed: ."
+

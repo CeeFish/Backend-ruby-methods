@@ -2,24 +2,14 @@
 #Then call the method in your program and print out what it returns.  
 #Call the program divisible.rb.
 
-class MyArray
-
-    def initialize
-        @array = []
-    end
-
-    def divnumbers(n)
-        (1..100).each do |n|
-            if n % 2 
-                puts "#{divnumbers} is divisible by 2"
-            elsif n % 3
-                puts "#{divnumbers} is divisible by 3"
-            else n % 5
-                puts "#{divnumbers} is divisible by 5"
-                break
-            end
+def divnumbers
+    array = []
+    (1..100).each do |n|
+        if n % 2 == 0 || n % 3 == 0 || n % 5 ==0
+            array.push(n)
         end
     end
+    puts array.inspect
 end
 
-my_array = MyArray.new
+divnumbers

@@ -4,3 +4,10 @@
 #(Question: Can you find online information on Ruby hash methods that will help with this function?)  
 #Call this program hash_to_array.rb.
 
+item = Hash.new
+puts item.inspect
+
+def collect_list
+    
+    
+end
