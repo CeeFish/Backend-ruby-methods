@@ -4,8 +4,22 @@
 #The first time, pass a block that adds the two numbers. The second time,
 #pass a block that multiplies the two numbers.  Your program should print out 16 and 63
 
-def do_calc(&block)
+class BlockFunct
+    attr_accessor :answer
 
-    yield 
-    
+    def initialize(num1, num2)
+        @num1 = num1
+        @num2 = num2
+    end
+
+    def do_calc
+        yield (@num1 + @num2)
+        yield (@num1 * @num2)
+    end
+end
+
+blockfunct = BlockFunct.new(7,9)
+
+blockfunct.do_calc do |value|
+    puts "The answer is: #{value}"
 end

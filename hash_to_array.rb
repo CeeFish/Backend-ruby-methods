@@ -6,19 +6,20 @@
 
 #Each do needed for the second part to take a key and a value
 
-def collect_list("")
-    print "What is the item called? "
+def collect_list(opt_key, opt_value)
+    print "What is the item? "
     item_name = gets.chomp
 
-    print "How much does it cost? "
+    print "How much does the item cost? "
     item_cost = gets.chomp
-    
-    hash = {"" => ""}
+
+    hash = {"opt_key" => "opt_value"}
     return hash
 
-    
+    .each do |opt_key, opt_value|
+    print "#{opt_key}: #{opt_value}"
+    end
 end
 
 list = collect_list()
 
-list["item"].push(collect_list)
