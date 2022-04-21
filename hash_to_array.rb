@@ -4,10 +4,21 @@
 #(Question: Can you find online information on Ruby hash methods that will help with this function?)  
 #Call this program hash_to_array.rb.
 
-item = Hash.new
-puts item.inspect
+#Each do needed for the second part to take a key and a value
 
-def collect_list
+def collect_list("")
+    print "What is the item called? "
+    item_name = gets.chomp
+
+    print "How much does it cost? "
+    item_cost = gets.chomp
     
+    hash = {"" => ""}
+    return hash
+
     
 end
+
+list = collect_list()
+
+list["item"].push(collect_list)

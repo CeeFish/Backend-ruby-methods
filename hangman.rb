@@ -6,12 +6,18 @@
 #Example: hangman("bob",["b"]) should evaluate to "b_b"
 #Example: hangman("alphabet",["a","h"]) should return "a__ha___"
 
-def hangman(word, array)
+def hangman(correct_answer, guessed_letters)
     array = []
-    print "Type in your guess: "
-    guess = gets.to_s
-    array.push(guess)
+    number_of_letters = correct_answer.length
+    correct_answer.split("").each do |letter| # for each things in things do something while storing that things in the variable item
+        if guessed_letters.include? letter
+            array.push("#{letter}")
+        else
+            array.push("_")
+        end
+    end
+    array.join("")
 end
 
-puts "Letters that have been guessed: ."
-
+puts hangman("bob", ["b"]).inspect
+puts hangman("alphabet", ["a", "h"]).inspect

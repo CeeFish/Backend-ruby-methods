@@ -6,5 +6,6 @@
 
 def do_calc(&block)
 
-    yield
+    yield 
+    
 end
