@@ -4,22 +4,26 @@
 #(Question: Can you find online information on Ruby hash methods that will help with this function?)  
 #Call this program hash_to_array.rb.
 
-#Each do needed for the second part to take a key and a value
+def collect_list
+    hash = {}
 
-def collect_list(opt_key, opt_value)
+    5.times do
     print "What is the item? "
     item_name = gets.chomp
 
     print "How much does the item cost? "
     item_cost = gets.chomp
 
-    hash = {"opt_key" => "opt_value"}
-    return hash
+    hash.store("#{item_name}", "#{item_cost}") 
 
-    .each do |opt_key, opt_value|
-    print "#{opt_key}: #{opt_value}"
+        hash.each do |item_name, item_cost|
+        print "#{item_name}: #{item_cost}"
+        end
     end
+
+    puts
+    puts "These are the keys: #{hash.keys}"
+    puts "These are the values: #{hash.values}"
 end
 
-list = collect_list()
-
+print collect_list

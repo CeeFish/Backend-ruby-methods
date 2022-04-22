@@ -5,7 +5,6 @@
 #pass a block that multiplies the two numbers.  Your program should print out 16 and 63
 
 class BlockFunct
-    attr_accessor :answer
 
     def initialize(num1, num2)
         @num1 = num1
